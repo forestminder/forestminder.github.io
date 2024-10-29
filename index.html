@@ -9,20 +9,33 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: black; /* Must taust */
+            background-color: #004d00; /* Tumedam roheline taust */
             color: white; /* Valge tekst */
         }
         header {
-            background-color: #007acc; /* Pea menüü värv */
+            background-color: #007700; /* Pea menüü värv (roheline) */
             padding: 20px;
             text-align: center;
+            position: relative; /* Positsioneerimine pildi jaoks */
+        }
+        header img {
+            width: 100%; /* Pilt katab kogu headeri laius */
+            height: auto; /* Säilitab pildi proportsioonid */
+            position: absolute; /* Asetab pildi headeri alla */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Tagaplaanile */
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            position: relative; /* Hoiab pealkirja ees pildi kohal */
+            z-index: 1;
         }
         nav {
             margin-top: 10px;
+            position: relative; /* Hoiab menüü ees pildi kohal */
+            z-index: 1;
         }
         nav a {
             color: white;
@@ -44,24 +57,26 @@
         .section {
             margin: 20px;
             padding: 20px;
-            border: 2px solid #007acc; /* Sektsiooni piir */
+            border: 2px solid #007700; /* Sektsiooni piir (roheline) */
             border-radius: 8px;
             max-width: 600px;
+            background-color: rgba(0, 150, 0, 0.3); /* Heledam roheline sektsioonide taust */
             transition: background-color 0.3s;
         }
         .section:hover {
-            background-color: rgba(0, 122, 204, 0.2); /* Sektsiooni hover efekt */
+            background-color: rgba(0, 150, 0, 0.5); /* Sektsiooni hover efekt */
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #007acc;
+            background-color: #007700; /* Alusteave (roheline) */
         }
     </style>
 </head>
 <body>
 
 <header>
+    <img src="path/to/your/header-image.jpg" alt="Forestmind OÜ header image"> <!-- Lisa siia pildi URL -->
     <h1>Forestmind OÜ</h1>
     <nav>
         <a href="ettevõttest.html">Ettevõttest</a>
