@@ -1,46 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forestmind">
-    <title>Minu Veebileht</title>
+    <meta name="description" content="Minu ettevõtte Forestmind OÜ veebileht">
+    <title>Forestmind OÜ</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: black; /* Must taust */
             color: white; /* Valge tekst */
-            position: relative;
-            overflow: hidden;
         }
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Hoia pilt õiges proportsioonis */
-            transform: translate(-50%, -50%);
-            z-index: 1; /* Aseta pilt alla */
-            opacity: 0.5; /* Muuda läbipaistvust */
-        }
-        h1 {
-            position: relative;
-            z-index: 2; /* Aseta tekst üle pildi */
-            font-size: 2.5em; /* Suurenda teksti suurust */
+        header {
+            background-color: #007acc; /* Pea menüü värv */
+            padding: 20px;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+        }
+        .section {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #007acc; /* Sektsiooni piir */
+            border-radius: 8px;
+            max-width: 600px;
+            transition: background-color 0.3s;
+        }
+        .section:hover {
+            background-color: rgba(0, 122, 204, 0.2); /* Sektsiooni hover efekt */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007acc;
         }
     </style>
 </head>
 <body>
-    <img src="https://github.com/forestminder/forestminder.github.io/blob/main/TDJI_0902.jpg?raw=true" alt="Veebileht on valmimisel">
-    <h1>Veebileht on valmimisel</h1>
+
+<header>
+    <h1>Forestmind OÜ</h1>
+    <nav>
+        <a href="ettevõttest.html">Ettevõttest</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="services.html">Teenused</a>
+    </nav>
+</header>
+
+<div class="content">
+    <div class="section">
+        <h2>Tere tulemast Forestmind OÜ lehele!</h2>
+        <p>Pakume metsa- ja ökosüsteemiteenuseid, et toetada kestlikku arengut ja looduse kaitset.</p>
+    </div>
+    <div class="section">
+        <h2>Meie Missioon</h2>
+        <p>Oleme pühendunud keskkonnasõbralike lahenduste leidmisele, et tagada puhta ja elujõulise looduse säilitamine tulevaste põlvede jaoks.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Forestmind OÜ. Kõik õigused kaitstud.</p>
+</footer>
+
 </body>
 </html>
-
