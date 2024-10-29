@@ -3,42 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Minu ettevõtte Forestmind OÜ veebileht">
-    <title>Forestmind OÜ</title>
+    <meta name="description" content="Forestmind OÜ teenused">
+    <title>Teenused - Forestmind OÜ</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #004d00; /* Tumedam roheline taust */
-            color: white; /* Valge tekst */
+            background-color: #ffffff; /* Valge taust */
+            color: #000000; /* Must tekst */
+            text-align: center;
         }
         header {
-            background-color: #007700; /* Pea menüü värv (roheline) */
             padding: 20px;
-            text-align: center;
-            position: relative; /* Positsioneerimine pildi jaoks */
         }
         header img {
-            width: 100%; /* Pilt katab kogu headeri laius */
-            height: auto; /* Säilitab pildi proportsioonid */
-            position: absolute; /* Asetab pildi headeri alla */
-            top: 0;
-            left: 0;
-            z-index: -1; /* Tagaplaanile */
+            width: 100%;
+            height: auto;
+            max-height: 300px;
         }
         header h1 {
-            margin: 0;
+            margin: 10px 0;
             font-size: 2.5em;
-            position: relative; /* Hoiab pealkirja ees pildi kohal */
-            z-index: 1;
+            color: #000000;
         }
         nav {
             margin-top: 10px;
-            position: relative; /* Hoiab menüü ees pildi kohal */
-            z-index: 1;
         }
         nav a {
-            color: white;
+            color: #000000;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
@@ -51,48 +43,44 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 80vh;
-            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
         }
         .section {
             margin: 20px;
             padding: 20px;
-            border: 2px solid #007700; /* Sektsiooni piir (roheline) */
+            border: 1px solid #000000; /* Must piir */
             border-radius: 8px;
-            max-width: 600px;
-            background-color: rgba(0, 150, 0, 0.3); /* Heledam roheline sektsioonide taust */
-            transition: background-color 0.3s;
-        }
-        .section:hover {
-            background-color: rgba(0, 150, 0, 0.5); /* Sektsiooni hover efekt */
+            background-color: #ffffff; /* Valge sektsiooni taust */
         }
         footer {
-            text-align: center;
             padding: 20px;
-            background-color: #007700; /* Alusteave (roheline) */
+            color: #000000;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://github.com/forestminder/forestminder.github.io/blob/7562be1b6c339d065703e34920b6271f0c5215da/TDJI_0902.jpg" alt="Forestmind OÜ header image"> <!-- Lisa siia pildi URL -->
-    <h1>Forestmind OÜ</h1>
+    <img src="path/to/your/header-image.jpg" alt="Forestmind OÜ header image"> <!-- Asenda pildi tee õige failiga -->
+    <h1>Forestmind OÜ Teenused</h1>
     <nav>
-        <a href="ettevottest.html">Ettevõttest</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="teenused.html">Teenused</a>
+        <a href="index.html">Avaleht</a>
+        <a href="ettevõttest.html">Ettevõttest</a>
+        <a href="contact.html">Kontakt</a>
     </nav>
 </header>
 
 <div class="content">
     <div class="section">
-        <h2>Tere tulemast Forestmind OÜ lehele!</h2>
-        <p>Pakume metsa- ja ökosüsteemiteenuseid, et toetada kestlikku arengut ja looduse kaitset.</p>
-    </div>
-    <div class="section">
-        <h2>Meie Missioon</h2>
-        <p>Oleme pühendunud keskkonnasõbralike lahenduste leidmisele, et tagada puhta ja elujõulise looduse säilitamine tulevaste põlvede jaoks.</p>
+        <h2>Pakutavad Teenused</h2>
+        <ul>
+            <li><strong>Metsade haldamine:</strong> Professionaalsed lahendused metsa haldamiseks ja kaitsmiseks.</li>
+            <li><strong>Ökosüsteemide hindamine:</strong> Kvaliteetsed analüüsid ja hinnangud meie ökoloogiliste süsteemide seisundi kohta.</li>
+            <li><strong>Konsultatsioonid looduskaitse valdkonnas:</strong> Spetsialiseeritud nõustamine, et toetada looduslike elupaikade kaitset.</li>
+            <li><strong>Metsade taastamine ja metsastamine:</strong> Meie meeskond aitab teil taastada ja istutada uusi metsi, edendades keskkonnasäästlikkust.</li>
+        </ul>
     </div>
 </div>
 
