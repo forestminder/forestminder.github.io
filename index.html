@@ -3,89 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forestmind OÜ teenused">
-    <title>Teenused - Forestmind OÜ</title>
+    <title>Forestmind OÜ - Metsa ja Ökosüsteemiteenused</title>
     <style>
+        /* Üldised stiilid */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #ffffff; /* Valge taust */
-            color: #000000; /* Must tekst */
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
         }
-        header {
-            padding: 20px;
-        }
-        header img {
-            width: 100%;
-            height: auto;
-            max-height: 300px;
-        }
-        header h1 {
-            margin: 10px 0;
-            font-size: 2.5em;
-            color: #000000;
-        }
+        
+        /* Navigeerimisriba */
         nav {
-            margin-top: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
         }
         nav a {
-            color: #000000;
+            color: white;
             text-decoration: none;
             margin: 0 15px;
-            font-size: 1.2em;
+            font-size: 1em;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #00a651; /* Heleroheline toon hover-efektiks */
         }
-        .content {
+        
+        /* Headeri stiil */
+        header {
+            position: relative;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 80vh; /* Headeri kõrgus */
+            background-image: url('path/to/your/header-image.jpg'); /* Siia pane oma pildi tee */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Läbipaistvuse efekt */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Läbipaistva efekti filter */
+            z-index: 1;
+        }
+        
+        /* Headeri tekst */
+        header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5em;
+            background-color: rgba(255, 255, 255, 0.3); /* Kerge läbipaistvus tekstile */
             padding: 20px;
-            max-width: 800px;
+            border-radius: 8px;
+        }
+
+        /* Sektsioonide stiil */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: auto;
         }
-        .section {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #000000; /* Must piir */
-            border-radius: 8px;
-            background-color: #ffffff; /* Valge sektsiooni taust */
+        section h2 {
+            font-size: 2em;
+            color: #00a651; /* Roheline toon */
+            margin-bottom: 20px;
         }
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        /* Jalus */
         footer {
-            padding: 20px;
-            color: #000000;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
+<!-- Navigeerimisriba -->
+<nav>
+    <a href="index.html">Avaleht</a>
+    <a href="ettevõttest.html">Ettevõttest</a>
+    <a href="teenused.html">Teenused</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<!-- Header -->
 <header>
-    <img src="https://github.com/forestminder/forestminder.github.io/blob/main/header.png?raw=true" alt="Forestmind OÜ header image"> <!-- Asenda pildi tee õige failiga -->
-    <h1>Forestmind OÜ Teenused</h1>
-    <nav>
-        <a href="index.html">Avaleht</a>
-        <a href="ettevottest.html">Ettevõttest</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
+    <h1>Forestmind OÜ</h1>
 </header>
 
-<div class="content">
-    <div class="section">
-        <h2>Pakutavad Teenused</h2>
-        <ul>
-            <li><strong>Metsade haldamine:</strong> Professionaalsed lahendused metsa haldamiseks ja kaitsmiseks.</li>
-            <li><strong>Ökosüsteemide hindamine:</strong> Kvaliteetsed analüüsid ja hinnangud meie ökoloogiliste süsteemide seisundi kohta.</li>
-            <li><strong>Konsultatsioonid looduskaitse valdkonnas:</strong> Spetsialiseeritud nõustamine, et toetada looduslike elupaikade kaitset.</li>
-            <li><strong>Metsade taastamine ja metsastamine:</strong> Meie meeskond aitab teil taastada ja istutada uusi metsi, edendades keskkonnasäästlikkust.</li>
-        </ul>
-    </div>
-</div>
+<!-- Sisu sektsioonid -->
+<section id="ettevõttest">
+    <h2>Ettevõttest</h2>
+    <p>Forestmind OÜ pakub mitmesuguseid teenuseid metsanduse ja ökosüsteemiteenuste valdkonnas. Meie eesmärk on pakkuda kvaliteetseid ja keskkonnasõbralikke lahendusi, mis toetavad loodusliku tasakaalu säilimist.</p>
+</section>
 
+<section id="teenused">
+    <h2>Teenused</h2>
+    <p>Pakume laia valikut teenuseid, mis hõlmavad metsa hindamist, hooldust, ökosüsteemide analüüsi ja jätkusuutlikkuse konsultatsioone.</p>
+</section>
+
+<!-- Jalus -->
 <footer>
-    <p>&copy; 2024 Forestmind OÜ. Kõik õigused kaitstud.</p>
+    <p>Forestmind OÜ | Kõik õigused kaitstud</p>
 </footer>
 
 </body>
