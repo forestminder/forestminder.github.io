@@ -4,112 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forestmind OÜ - Metsa ja Ökosüsteemiteenused</title>
-    <style>
-        /* Üldised stiilid */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        /* Navigeerimisriba */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1em;
-        }
-        nav a:hover {
-            color: #00a651; /* Heleroheline toon hover-efektiks */
-        }
-        
-        /* Headeri stiil */
-        header {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 80vh; /* Headeri kõrgus */
-            background-image: url('https://github.com/forestminder/forestminder.github.io/blob/main/header.png?raw=true'); /* Siia pane oma pildi tee */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-        }
-        
-        /* Läbipaistvuse efekt */
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Läbipaistva efekti filter */
-            z-index: 1;
-        }
-        
-        /* Headeri tekst */
-        header h1 {
-            position: relative;
-            z-index: 2;
-            font-size: 2.5em;
-            background-color: rgba(255, 255, 255, 0.3); /* Kerge läbipaistvus tekstile */
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* Sektsioonide stiil */
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        section h2 {
-            font-size: 2em;
-            color: #00a651; /* Roheline toon */
-            margin-bottom: 20px;
-        }
-        section p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #666;
-        }
-        
-        /* Jalus */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Viidatud CSS fail -->
 </head>
 <body>
 
 <!-- Navigeerimisriba -->
 <nav>
-    <a href="index.html">Avaleht</a>
-    <a href="ettevottest.html">Ettevõttest</a>
-    <a href="teenused.html">Teenused</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="#home">Avaleht</a>
+    <a href="#ettevottest">Ettevõttest</a>
+    <a href="#teenused">Teenused</a>
+    <a href="#kontakt">Kontakt</a>
 </nav>
 
 <!-- Header -->
-<header>
+<header id="home" class="header">
     <h1>Forestmind OÜ</h1>
 </header>
 
@@ -129,5 +37,6 @@
     <p>Forestmind OÜ | Kõik õigused kaitstud</p>
 </footer>
 
+<script src="script.js"></script> <!-- Viidatud JavaScript fail -->
 </body>
 </html>
