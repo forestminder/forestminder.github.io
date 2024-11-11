@@ -1,70 +1,107 @@
 /* Üldised stiilid */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
     color: #333;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth; /* Sujuv kerimine */
 }
 
-/* Päise stiilid */
-.header {
-    background-color: #2e7d32;
-    color: white;
-    padding: 15px;
+/* Navigeerimisriba */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.9); /* Tumeda taustavärvi säilitamine */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
+    z-index: 1000;
 }
-.header h1 {
-    margin: 0;
-}
-.nav-links {
-    list-style-type: none;
-    padding: 0;
-}
-.nav-links li {
-    display: inline;
-    margin: 0 15px;
-}
-.nav-links a {
+nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: color 0.3s ease; /* Sujuv värvi muutmine */
 }
-.nav-links a:hover {
-    text-decoration: underline;
+nav a:hover {
+    color: #00a651; /* Heleroheline toon hover-efektiks */
 }
 
-/* SVG ikoonide sektsioon */
-.tree-icons {
+/* Headeri stiil */
+.header {
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    padding: 40px;
-    background-color: #e8f5e9; /* hele taust värv */
-}
-.tree-icons svg {
-    width: 100px;
-    height: 100px;
-    fill: #2e7d32; /* roheline toon puu jaoks */
-    transition: transform 0.3s ease;
-}
-.tree-icons svg:hover {
-    transform: scale(1.1); /* Suurendab puid veidi hoveril */
-}
-
-/* Kerimisefekti animatsioon */
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
-.fade-in.show {
-    opacity: 1;
-}
-
-/* Jaluse stiilid */
-.footer {
-    background-color: #2e7d32;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Tagab, et header katab terve ekraani */
+    background-image: url('https://github.com/forestminder/forestminder.github.io/blob/main/header.png?raw=true'); /* Siia pane oma pildi tee */
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+}
+
+/* Läbipaistvuse efekt */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Tumedam läbipaistvuse efekt */
+    z-index: 1;
+}
+
+/* Headeri tekst */
+.header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3em;
+    background-color: rgba(255, 255, 255, 0.3); /* Kerge läbipaistvus tekstile */
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeIn 2s; /* Animatsioon */
+}
+
+/* Animatsioon */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Sektsioonide stiil */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    transition: background-color 0.3s ease; /* Sujuv taustavärvi muutmine */
+}
+section h2 {
+    font-size: 2.5em;
+    color: #00a651; /* Roheline toon */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00a651; /* Ala-joon */
+    padding-bottom: 10px;
+}
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Jalus */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
